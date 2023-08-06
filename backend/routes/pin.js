@@ -7,7 +7,7 @@ router.post("/", async (req, res) => {
   try {
     const savedPin = await newPin.save();
     res.status(200).json(savedPin);
-  } catch (error) {
+  } catch (err) {
     res.status(500).json(err);
   }
 });
